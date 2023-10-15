@@ -10,6 +10,7 @@ public class GoldBarFinderTester {
 
     public void runTests() {
         // list of all methods for each test case
+        // test
 
     }
 
