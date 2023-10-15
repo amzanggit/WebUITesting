@@ -33,7 +33,8 @@ public class GoldBarFinder {
      * @param goldBarList
      * @param start
      * @param end
-     * @return -1： all gold bars are real or return fake bar number.
+     * @return -1: No fake bar is found
+     *
      */
     private int findFakeBarHelper(List<Integer> goldBarList, int start, int end) {
         int n = end - start + 1;
@@ -84,7 +85,7 @@ public class GoldBarFinder {
         return 0;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
 
 //        // Test Case 1: if there are duplicate coins
@@ -122,15 +123,15 @@ public class GoldBarFinder {
 //        System.out.println("The fake bar is: " + test.findFakeBar(goldBarList));
 
         // test case 3: 全部都是真的
-        {
-            List<Integer> goldBarList = new ArrayList<>();
-            int n = 8;
-            for (int i = 0; i < n; i++) {
-                goldBarList.add(i);
-            }
-            GoldBarFinder test = new GoldBarFinder(9);
-            System.out.println("The fake bar is: " + test.findFakeBar(goldBarList));
-        }
+//        {
+//            List<Integer> goldBarList = new ArrayList<>();
+//            int n = 8;
+//            for (int i = 0; i < n; i++) {
+//                goldBarList.add(i);
+//            }
+//            GoldBarFinder test = new GoldBarFinder(9);
+//            System.out.println("The fake bar is: " + test.findFakeBar(goldBarList));
+//        }
 
 //        // test case 4: 有一個假的
 //        {
@@ -142,5 +143,4 @@ public class GoldBarFinder {
 //            GoldBarFinder test = new GoldBarFinder(8);
 //            System.out.println("The fake bar is: " + test.findFakeBar(goldBarList));
 //        }
-    }
 }

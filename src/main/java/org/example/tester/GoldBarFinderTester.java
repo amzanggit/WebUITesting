@@ -5,8 +5,13 @@ import org.example.finder.GoldBarFinder;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestFindFakeGoldBar {
-    List<Integer> goldBarList = new ArrayList<>();
+public class GoldBarFinderTester {
+    // List<Integer> goldBarList = new ArrayList<>();
+
+    public void runTests() {
+        // list of all methods for each test case
+
+    }
 
     //Test Case 1: all bars are unique and with only one fake bar
     public void testUniqueBarsWithOneFakeBar() {
@@ -52,4 +57,9 @@ public class TestFindFakeGoldBar {
     }
 
     //Test Case 3:
+
+
+    public static void main(String[] args) {
+        new GoldBarFinderTester().runTests();
+    }
 }
