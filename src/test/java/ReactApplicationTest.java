@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class MyTest {
+public class ReactApplicationTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
