@@ -4,6 +4,8 @@ The `FakeGoldBarFinder` project aims to identify the counterfeit gold bar among 
 
 The website that I performed UI testing is http://sdetchallenge.fetch.com/.
 
+I have also uploaded a screen record on how the test automation performed on the website. Please refer to FetchTestClip.mp4 in repository.
+
 ## Table of Contents
 
 - [Project Structure](#project-structure)
@@ -45,7 +47,6 @@ The website that I performed UI testing is http://sdetchallenge.fetch.com/.
         - **Usage**:
           1. Ensure you have SafariDriver installed and properly set up in your environment.
           2. When using the `DriverFactory` in tests, instantiate the driver and use the predefined `wait` mechanism wherever necessary to ensure stable and reliable tests.
-    - **Purpose**: Defines the configurations for the web test using SafariDriver.
 
 ## Usage
 
