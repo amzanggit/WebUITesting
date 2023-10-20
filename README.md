@@ -71,7 +71,7 @@ The project adopts a strategic approach to test automation, particularly for web
 2. **Cucumber for BDD**:
     - The project is also envisioned to integrate with Cucumber, promoting Behavior Driven Development (BDD). Below is how I would design the feature file:
 
-    ![Screenshot of feature file.](/Users/amz/Desktop/featureFile.png)
+    ![Screenshot of feature file.](featureFile.png)
 
     - The rationale behind this is to employ a more natural language-like syntax for test cases which is both readable by non-technical stakeholders and executable as automated tests.
     - Leveraging Cucumber's feature files, the test methods have been sculpted, serving as step definitions. This ensures a seamless and fluid automation flow, allowing front-end UI tests to run automatically based on the described behaviors. I have also started a scratch version of what each test method looks like,
