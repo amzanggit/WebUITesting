@@ -76,7 +76,7 @@ The project adopts a strategic approach to test automation, particularly for web
     - The rationale behind this is to employ a more natural language-like syntax for test cases which is both readable by non-technical stakeholders and executable as automated tests.
     - Leveraging Cucumber's feature files, the test methods have been sculpted, serving as step definitions. This ensures a seamless and fluid automation flow, allowing front-end UI tests to run automatically based on the described behaviors. I have also started a scratch version of what each test method looks like,
 
-    ![Screenshot of step definition code.](/Users/amz/Desktop/stepDefinition.png)
+    ![Screenshot of step definition code.](stepDefinition.png)
 
 3. **Challenges with TestNG and React**:
     - While TestNG offers powerful testing capabilities, the decision not to use it for BDD in conjunction with React was influenced by a limitation: lack of access to the React web application's source code. Only the web URL was provided, restricting the depth of testing that could be accomplished using this framework in this context.
