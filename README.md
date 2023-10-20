@@ -67,19 +67,22 @@ The project adopts a strategic approach to test automation, particularly for web
 1. **TestNG Integration**:
     - One of the planned enhancements is the integration with TestNG. The move towards TestNG not only offers powerful test configurations and parallel executions but also brings enhanced reporting capabilities.
 
+
 2. **Cucumber for BDD**:
     - The project is also envisioned to integrate with Cucumber, promoting Behavior Driven Development (BDD). Below is how I would design the feature file:
+   
+      ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/Users/amz/Desktop/featureFile.png)
 
     - The rationale behind this is to employ a more natural language-like syntax for test cases which is both readable by non-technical stakeholders and executable as automated tests.
-    - Leveraging Cucumber's feature files, the test methods have been sculpted, serving as step definitions. This ensures a seamless and fluid automation flow, allowing front-end UI tests to run automatically based on the described behaviors.
+    - Leveraging Cucumber's feature files, the test methods have been sculpted, serving as step definitions. This ensures a seamless and fluid automation flow, allowing front-end UI tests to run automatically based on the described behaviors. I have also started a scratch version of what each test method looks like, 
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/Users/amz/Desktop/stepDefinition.png)
 
 3. **Challenges with TestNG and React**:
     - While TestNG offers powerful testing capabilities, the decision not to use it for BDD in conjunction with React was influenced by a limitation: lack of access to the React web application's source code. Only the web URL was provided, restricting the depth of testing that could be accomplished using this framework in this context.
 
-The fusion of TestNG and Cucumber positions the project for a more streamlined and comprehensive test automation execution. These strategies underline the commitment to enhance test reliability, readability, and collaboration across teams.
-
-For a detailed understanding and more intricate test scenarios, kindly refer back to our previous discussions.
+The fusion of TestNG and Cucumber positions the project for a more streamlined and comprehensive test automation execution. From my previous experience, I have learned that these strategies underline the commitment to enhance test reliability, readability, and collaboration across teams. Therefore, if I had the source code or frontend code like Node.js, I would be able to perform automation testing using testNG.
 
 ## Feedback and Suggestions
 
-If you encounter any issues or have suggestions while using this project, please feel free to reach out.
+If you encounter any issues or have suggestions while using this project, please feel free to reach out at jamzhang29@gmail.com. Thank you for your time looking into this project. 
