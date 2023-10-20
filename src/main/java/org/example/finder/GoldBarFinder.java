@@ -1,5 +1,7 @@
 package org.example.finder;
 
+import org.example.exception.EmptyGoldBarListException;
+import org.example.exception.InvalidGoldNumberException;
 import org.example.exception.NoDuplicateValueException;
 import org.example.exception.NoFakeBarException;
 
@@ -19,11 +21,29 @@ public class GoldBarFinder {
         this.fakeGoldNumber = fakeGoldNumber;
     }
 
-    public int findFakeBar(List<Integer> goldBarList) throws NoFakeBarException, NoDuplicateValueException {
+    public int findFakeBar(List<Integer> goldBarList) throws NoFakeBarException, NoDuplicateValueException, EmptyGoldBarListException, InvalidGoldNumberException {
+        // corner cases
+        if (goldBarList == null) {
+            throw new IllegalArgumentException("Gold bar list cannot be null.");
+        }
+        if (goldBarList.isEmpty()) {
+            throw new EmptyGoldBarListException("Gold bar list cannot be empty.");
+        }
+        if (goldBarList.stream().anyMatch(n -> n < 0)) {
+            // Check if the negative number is the fake gold number
+            if (goldBarList.stream().filter(n -> n < 0).anyMatch(n -> n == fakeGoldNumber)) {
+                throw new InvalidGoldNumberException("Invalid fake gold number!");
+            } else {
+                throw new InvalidGoldNumberException("Gold bar list contains negative numbers!");
+            }
+        }
+
         Set<Integer> set = new HashSet<>(goldBarList.size());
         for (Integer item : goldBarList) {
-            // Test if there is duplicate value
-            if (set.contains(item)) {
+            // test if there is duplicate value
+            if (set.contains(item) && item == fakeGoldNumber) {
+                throw new NoDuplicateValueException("Duplicate fake gold bar sequence numbers are not allowed.");
+            } else if (set.contains(item) && item != fakeGoldNumber) {
                 throw new NoDuplicateValueException("Duplicate gold bar sequence numbers are not allowed.");
             }
             set.add(item);
@@ -46,14 +66,21 @@ public class GoldBarFinder {
         }
 
         int third = n / 3;
+
+        // need to consider when third is less than 2 cases
+        if (third <= 1) {
+            // Weigh bars one by one against a known real bar or another bar if there isn't a known real one
+            for (int i = start; i <= end; i++) {
+                if (goldBarList.get(i) == fakeGoldNumber) {
+                    return i;
+                }
+            }
+            throw new NoFakeBarException("No fake bar is found");
+        }
+
         List<Integer> firstGroup = goldBarList.subList(start, start + third);
         List<Integer> secondGroup = goldBarList.subList(start + third, start + 2 * third);
         if (weigh(firstGroup, secondGroup) == 0) {
-            // Check case when third is equal to 1
-            if (third == 1) {
-                // all gold bars are real
-                throw new NoFakeBarException("No fake bar is found");
-            }
             // fake bar is in the third group
             return findFakeBarHelper(goldBarList, start + 2 * third, end);
         } else if (weigh(firstGroup, secondGroup) == 1) {
