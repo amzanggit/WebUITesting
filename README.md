@@ -4,6 +4,8 @@ The `FakeGoldBarFinder` project aims to identify the counterfeit gold bar among 
 
 The website that I performed UI testing is http://sdetchallenge.fetch.com/.
 
+I have also uploaded a screen record on how the test automation performed on the website. Please refer to FetchTestClip.mp4 in repository.
+
 ## Table of Contents
 
 - [Project Structure](#project-structure)
@@ -45,7 +47,6 @@ The website that I performed UI testing is http://sdetchallenge.fetch.com/.
         - **Usage**:
           1. Ensure you have SafariDriver installed and properly set up in your environment.
           2. When using the `DriverFactory` in tests, instantiate the driver and use the predefined `wait` mechanism wherever necessary to ensure stable and reliable tests.
-    - **Purpose**: Defines the configurations for the web test using SafariDriver.
 
 ## Usage
 
@@ -74,12 +75,12 @@ The project adopts a strategic approach to test automation, particularly for web
 2. **Cucumber for BDD**:
     - The project is also envisioned to integrate with Cucumber, promoting Behavior Driven Development (BDD). Below is how I would design the feature file:
 
-    ![Screenshot of feature file.](/Users/amz/Desktop/featureFile.png)
+    ![Screenshot of feature file.](featureFile.png)
 
     - The rationale behind this is to employ a more natural language-like syntax for test cases which is both readable by non-technical stakeholders and executable as automated tests.
     - Leveraging Cucumber's feature files, the test methods have been sculpted, serving as step definitions. This ensures a seamless and fluid automation flow, allowing front-end UI tests to run automatically based on the described behaviors. I have also started a scratch version of what each test method looks like,
 
-    ![Screenshot of step definition code.](/Users/amz/Desktop/stepDefinition.png)
+    ![Screenshot of step definition code.](stepDefinition.png)
 
 3. **Challenges with TestNG and React**:
     - While TestNG offers powerful testing capabilities, the decision not to use it for BDD in conjunction with React was influenced by a limitation: lack of access to the React web application's source code. Only the web URL was provided, restricting the depth of testing that could be accomplished using this framework in this context.
