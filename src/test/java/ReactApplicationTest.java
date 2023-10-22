@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class ReactApplicationTest extends drivers.DriverFactory {
@@ -44,6 +45,8 @@ public class ReactApplicationTest extends drivers.DriverFactory {
 
         // click the weigh button
         driver.findElement(By.xpath("//button[@id='weigh']")).click();
+
+        driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 
         // check if the result is out
         WebElement result = driver.findElement(By.xpath("//div[@class='result']//button[@id='reset']"));
@@ -83,7 +86,6 @@ public class ReactApplicationTest extends drivers.DriverFactory {
         // Check if the actual alert text is one of the expected texts
         boolean isExpectedText = expectedAlertTexts.contains(actualAlertText);
 
-        // Assert
         Assert.assertTrue(isExpectedText, "Unexpected alert text: " + actualAlertText);
 
         alert.accept();

@@ -59,6 +59,9 @@ The website that I performed UI testing is http://sdetchallenge.fetch.com/.
 1. To run the unit test for `GoldBarFinder`, execute the `GoldBarFinderTest` class.
 2. To perform the web UI testing, execute the `ReactApplicationTest` class.
 
+Below is the screenshot of one of the running results:
+
+![Screenshot of result.](/Users/amz/Desktop/UIResult.png)
 
 ## Additional Information
 
