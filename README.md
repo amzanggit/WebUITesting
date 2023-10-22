@@ -62,7 +62,7 @@ I have also uploaded a screen record on how the test automation performed on the
 
 Below is the screenshot of one of the running results:
 
-![Screenshot of result.](/Users/amz/Desktop/UIResult.png)
+![Screenshot of result.](UIResult.png)
 
 ## Additional Information
 
